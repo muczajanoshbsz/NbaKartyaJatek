@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="NbaKartyaJatek.JatekosKartya"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Width="200" Height="250">
+    <Border BorderThickness="2" BorderBrush="White" CornerRadius="10" Background="#FF2C2C2C" Padding="10" Margin="10">
+        <StackPanel>
+            <TextBlock x:Name="NevText" FontWeight="Bold" FontSize="16" Foreground="White" TextAlignment="Center"/>
+            <TextBlock x:Name="CsapatText" Foreground="LightGray" TextAlignment="Center"/>
+            <Separator Margin="0,10"/>
+            <TextBlock x:Name="PosztText" Foreground="White"/>
+            <TextBlock x:Name="MagassagText" Foreground="White"/>
+            <TextBlock x:Name="SulyText" Foreground="White"/>
+            <Separator Margin="0,10"/>
+            <TextBlock x:Name="SebessegText" Foreground="Orange"/>
+            <TextBlock x:Name="DobasText" Foreground="Orange"/>
+            <TextBlock x:Name="PontossagText" Foreground="Orange"/>
+        </StackPanel>
+    </Border>
+</UserControl>
