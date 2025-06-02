@@ -14,7 +14,7 @@ namespace NbaKartyaJatek
         public int Magassag { get; set; }    
         public int Suly { get; set; }       
         public float Sebesseg { get; set; } 
-        public float Dobas { get; set; }   
+        public float Dobas { get; set; }
         public float Pontossag { get; set; }
 
         public override string ToString()
