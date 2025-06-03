@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Media;
 using MySql.Data.MySqlClient;
 
 namespace NbaKartyaJatek
@@ -110,7 +111,7 @@ namespace NbaKartyaJatek
             jatekosPakli.Clear();
             gepPakli.Clear();
 
-            
+
             for (int i = 0; i < valasztottLapok.Count; i++)
             {
                 if (i % 2 == 0)
@@ -164,7 +165,8 @@ namespace NbaKartyaJatek
 
             if (jatekosPakli.Count == 0 || gepPakli.Count == 0)
             {
-                MessageBox.Show("A játék véget ért!");
+                JatekVegetEr();
+                return;
             }
         }
 
@@ -241,6 +243,26 @@ namespace NbaKartyaJatek
                 case "Pontossag": return j.Pontossag;
                 default: return 0;
             }
+        }
+        private void JatekVegetEr()
+        {
+            string uzenet;
+            if (jatekosPont > gepPont)
+            {
+                uzenet = "Gratulálunk! Te nyertél!";
+                new SoundPlayer("win.wav").Play();
+            }
+            else if (gepPont > jatekosPont)
+            {
+                uzenet = "Sajnálom, a gép nyert!";
+                new SoundPlayer("lose.wav").Play();
+            }
+            else
+            {
+                uzenet = "Döntetlen!";
+            }
+
+            MessageBox.Show(uzenet, "Játék vége", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 
