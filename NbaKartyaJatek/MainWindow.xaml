@@ -62,7 +62,7 @@
 
             <!-- Gombok alul -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15" Grid.Row="2" >
-                <Button Content="Következő kör" Width="150" Margin="10" Click="KovetkezoKor_Click"/>
+                <Button Content="Lapfordítás" Width="150" Margin="10" Click="KovetkezoKor_Click"/>
                 <Button Content="Vissza a menübe" Width="150" Margin="10" Click="BackToMenu_Click"/>
             </StackPanel>
         </Grid>
